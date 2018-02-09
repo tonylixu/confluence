@@ -1,3 +1,5 @@
+// CNF version 6.5.0
+
 import com.atlassian.confluence.event.events.content.page.PageEvent
 import com.atlassian.confluence.core.ContentPermissionManager
 import com.atlassian.confluence.core.DefaultContentPermissionManager
