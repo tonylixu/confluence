@@ -1,3 +1,4 @@
+// CNF version 6.5.0
 import com.atlassian.confluence.pages.Page
 import com.atlassian.confluence.pages.PageManager
 import com.atlassian.confluence.spaces.Space
