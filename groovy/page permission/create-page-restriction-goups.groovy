@@ -18,3 +18,11 @@ log.setLevel(Level.INFO)
 // Define event
 def event = event as PageEvent
 log.debug("event defined: " + event)
+
+// Retrieve user name and create a user object
+def groupManager = ComponentLocator.getComponent(GroupManager)
+def userAccessor = ComponentLocator.getComponent(UserAccessor)
+def creator = event.getPage().getCreator()
+log.info("Page creator is " + creator['name'])
+def username = creator['name'].toString()
+def user = userAccessor.getUserByName(username)
