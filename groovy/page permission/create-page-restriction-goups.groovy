@@ -10,3 +10,7 @@ import com.atlassian.confluence.user.UserAccessor
 import com.atlassian.user.GroupManager
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
+
+// Set logger
+def log = Logger.getLogger("com.onresolve.jira.groovy")
+log.setLevel(Level.INFO)
