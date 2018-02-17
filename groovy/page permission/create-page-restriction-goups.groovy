@@ -14,3 +14,7 @@ import org.apache.log4j.Level
 // Set logger
 def log = Logger.getLogger("com.onresolve.jira.groovy")
 log.setLevel(Level.INFO)
+
+// Define event
+def event = event as PageEvent
+log.debug("event defined: " + event)
