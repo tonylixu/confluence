@@ -26,3 +26,7 @@ def creator = event.getPage().getCreator()
 log.info("Page creator is " + creator['name'])
 def username = creator['name'].toString()
 def user = userAccessor.getUserByName(username)
+
+// Retrieve groups of the user
+def groups = userAccessor.getGroupNames(user)
+log.info("list of groups are " + groups)
