@@ -30,3 +30,14 @@ def user = userAccessor.getUserByName(username)
 // Retrieve groups of the user
 def groups = userAccessor.getGroupNames(user)
 log.info("list of groups are " + groups)
+
+// Filter out groups that its name start with 'company-'
+// and set EDIT permissions
+for (group in groups) {
+    if (group.startsWith('company-')) {
+        log.info("Create page set permission script started...")
+        def permissionManager = ComponentLocator.getComponent(ContentPermissionManager)
+        def editRestriction = ContentPermission.createGroupPermission(ContentPermission.VIEW_PERMISSION,group)
+        permissionManager.addContentPermission(editRestriction, event.getPage())
+    }
+}
