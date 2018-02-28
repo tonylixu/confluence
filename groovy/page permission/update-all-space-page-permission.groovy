@@ -10,3 +10,6 @@ log.setLevel(Level.INFO)
 
 def spaceManager = ComponentLocator.getComponent(SpaceManager)
 def pageManager = ComponentLocator.getComponent(PageManager)
+
+// Retrieve all the spaces
+def spaces = spaceManager.allSpaces.findAll()
